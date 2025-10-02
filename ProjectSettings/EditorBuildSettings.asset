@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Press2Start.unity
+    guid: 3ac0e715b5e8c024a82edcd8004f7ba2
+  - enabled: 1
+    path: Assets/Scenes/GiveItToMe.unity
+    guid: 84ba5d42bee432948898976db92c7845
+  - enabled: 1
+    path: Assets/Scenes/KhuTaoSong.unity
+    guid: 7bb552d7a24358f4e93ade9044aabace
+  - enabled: 1
+    path: Assets/Scenes/PlasticBeach.unity
+    guid: f2c492123efc3c94e9afb77f1d6dfb7c
+  - enabled: 1
+    path: Assets/Scenes/showmethesky.unity
+    guid: f1b821f35c9bb8742a7636f565516517
+  - enabled: 1
+    path: Assets/Scenes/Aloso.unity
+    guid: 80160e8a88e8c26479c0382c2b5d14d5
+  m_configObjects:
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  m_UseUCBPForAssetBundles: 0
