@@ -1,33 +1,38 @@
 ﻿using Melanchall.DryWetMidi.Interaction;
-using System.Collections;
 using TMPro;
 using UnityEngine;
+using DG.Tweening;
 
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance;
+
+    [Header("Audio")]
     public AudioSource hitSFX;
     public AudioSource missSFX;
+
+    [Header("UI References")]
     public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI comboText; // thêm cái này
+    public TextMeshProUGUI comboText;
+
+    [Header("Score Colors")]
+    public Color perfectColor = new Color(0.3f, 1f, 1f);   // Cyan
+    public Color goodColor = new Color(0.3f, 1f, 0.3f);     // Green
+    public Color badColor = new Color(1f, 0.8f, 0.3f);      // Yellow
+    public Color normalColor = Color.white;
+
+    // Static stats
     static int maxCombo;
     static int comboScore;
-
     public static int totalNotes;
     public static int perfectCount;
     public static int goodCount;
+    public static int badCount;
     public static int missCount;
     public static int score;
 
-    void OnEnable()
-    {
-        SongManager.OnMidiLoaded += InitScore; // đăng ký lắng nghe
-    }
-
-    void OnDisable()
-    {
-        SongManager.OnMidiLoaded -= InitScore; // hủy đăng ký để tránh memory leak
-    }
+    void OnEnable() => SongManager.OnMidiLoaded += InitScore;
+    void OnDisable() => SongManager.OnMidiLoaded -= InitScore;
 
     private void InitScore()
     {
@@ -36,10 +41,7 @@ public class ScoreManager : MonoBehaviour
             totalNotes = SongManager.midiFile.GetNotes().Count;
             Debug.Log("Tổng số note = " + totalNotes);
         }
-        else
-        {
-            Debug.LogError("MIDI file null dù đã load!");
-        }
+        else Debug.LogError("MIDI file null dù đã load!");
     }
 
     void Start()
@@ -49,59 +51,88 @@ public class ScoreManager : MonoBehaviour
         maxCombo = 0;
         perfectCount = 0;
         goodCount = 0;
+        badCount = 0;
         missCount = 0;
         score = 0;
     }
 
+    // ==============================================================
+    // 🟢 MAIN ADD SCORE FUNCTION
+    // ==============================================================
+    private void AddScore(int amount, Color color, float pitchMin, float pitchMax, bool resetCombo = false)
+    {
+        RectTransform rect = scoreText.GetComponent<RectTransform>();
+        scoreText.DOKill(true);
+        rect.DOKill();
+
+        if (resetCombo)
+        {
+            comboScore = 0;
+            UpdateComboUI();
+        }
+        else
+        {
+            comboScore++;
+            if (comboScore > maxCombo) maxCombo = comboScore;
+            UpdateComboUI();
+        }
+
+        score += amount;
+        scoreText.text = "Score: " + score;
+
+        // SFX
+        hitSFX.volume = AudioManager.Instance.sfxVolume;
+        hitSFX.pitch = Random.Range(pitchMin, pitchMax);
+        hitSFX.Play();
+
+        // Hiệu ứng DOTween Sequence
+        Sequence seq = DOTween.Sequence();
+        seq.Append(rect.DOScale(1.3f, 0.15f).SetEase(Ease.OutBack))
+           .Join(scoreText.DOColor(color, 0.1f))
+           .AppendInterval(0.05f)
+           .Append(rect.DOScale(1f, 0.15f))
+           .Join(scoreText.DOColor(normalColor, 0.25f));
+
+        HealthBar.Instance.AddHealth(0.023f);
+    }
+
     public static void Perfect()
     {
-        comboScore += 1;
-        if (comboScore > maxCombo) maxCombo = comboScore;
-        Instance.UpdateComboUI();
-
+        Instance.AddScore(100, Instance.perfectColor, 0.9f, 1.2f);
         perfectCount++;
-        score += 100;
-
-        Instance.hitSFX.volume = AudioManager.Instance.sfxVolume;
-        Instance.hitSFX.pitch = Random.Range(0.8f, 1.2f); // 🎵 random pitch
-        Instance.hitSFX.Play();
     }
 
     public static void Good()
     {
-        comboScore += 1;
-        if (comboScore > maxCombo) maxCombo = comboScore;
-        Instance.UpdateComboUI();
-
+        Instance.AddScore(50, Instance.goodColor, 0.8f, 1.1f);
         goodCount++;
-        score += 50;
-
-        Instance.hitSFX.volume = AudioManager.Instance.sfxVolume;
-        Instance.hitSFX.pitch = Random.Range(0.8f, 1.5f); // 🎵 random pitch
-        Instance.hitSFX.Play();
     }
 
+    public static void Bad()
+    {
+        Instance.AddScore(20, Instance.badColor, 0.6f, 0.9f, resetCombo: true);
+        badCount++;
+    }
 
     public static void Miss()
     {
         comboScore = 0;
         Instance.UpdateComboUI();
-
+        HealthBar.Instance.SubtractHealth(0.04f);
         missCount++;
     }
 
-
-    private void Update()
-    {
-        scoreText.text = "Score: " + score.ToString();
-    }
     private void UpdateComboUI()
     {
-        if (comboScore > 1) // chỉ hiện khi combo >= 2
+        if (comboScore > 1)
         {
             comboText.text = "x" + comboScore + " Combo!";
-            StopAllCoroutines();
-            StartCoroutine(AnimateCombo(comboText.transform));
+            comboText.transform.DOKill();
+            comboText.transform.localScale = Vector3.one;
+            comboText.transform
+                .DOScale(1.2f, 0.2f)
+                .SetEase(Ease.OutBack)
+                .SetLoops(2, LoopType.Yoyo);
         }
         else
         {
@@ -109,29 +140,10 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    private IEnumerator AnimateCombo(Transform target)
+    private void Update()
     {
-        // scale effect
-        float duration = 0.2f;
-        float time = 0f;
-
-        Vector3 start = Vector3.one * 0.8f;
-        Vector3 end = Vector3.one * 1.2f;
-
-        target.localScale = start;
-
-        while (time < duration)
-        {
-            float t = time / duration;
-            target.localScale = Vector3.Lerp(start, end, t);
-            time += Time.deltaTime;
-            yield return null;
-        }
-
-        target.localScale = Vector3.one;
+        scoreText.text = "Score: " + score;
     }
 
-    // dùng khi cần kết quả cuối
     public static int GetMaxCombo() => maxCombo;
 }
-

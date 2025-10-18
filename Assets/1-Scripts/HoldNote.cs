@@ -11,14 +11,23 @@ public class HoldNote : MonoBehaviour
     public SpriteRenderer body;
     public SpriteRenderer tail;
 
+    [Header("Lane Direction")]
+    public string laneID;
+    public Transform noteSpawnPoint;
+    public Lane lane;
+
+    [Header("State (read-only)")]
+    private float heldTime = 0f;
     private float fullLength = 0f;        // chiều dài body ban đầu (world units)
     private bool isHoldingPhase = false;
     private bool finished = false;
     private bool playerHolding = false;
+    private bool headHidden = false;
 
     // info cho sprite simple
     private bool bodyIsSimple;
     private float spriteUnitHeight = 1f; // chiều cao sprite khi scale = 1 (world units)
+
 
     private void Awake()
     {
@@ -33,15 +42,33 @@ public class HoldNote : MonoBehaviour
         if (bodyIsSimple)
         {
             if (body.sprite != null)
-                spriteUnitHeight = body.sprite.bounds.size.y; // world units at scale = 1
+                spriteUnitHeight = body.sprite.bounds.size.y;
             else
                 spriteUnitHeight = 1f;
         }
 
-        // ẩn tạm — Start sẽ bật lại
         if (head) head.enabled = false;
         if (body) body.enabled = false;
         if (tail) tail.enabled = false;
+
+        if (laneID == "Left")
+        {
+            noteSpawnPoint.position = new Vector3(-4.18f, -2.8f, noteSpawnPoint.position.z);
+        }
+        else if (laneID == "Down")
+        {
+            noteSpawnPoint.position = new Vector3(-1.84f, -2.8f, noteSpawnPoint.position.z);
+        }
+        else if (laneID == "Up")
+        {
+            noteSpawnPoint.position = new Vector3(1.84f, -2.8f, noteSpawnPoint.position.z);
+        }
+        else if (laneID == "Right")
+        {
+            noteSpawnPoint.position = new Vector3(4.18f, -2.8f, noteSpawnPoint.position.z);
+        }
+
+        lane = FindFirstObjectByType<Lane>();
     }
 
     private bool initialized = false;
@@ -59,14 +86,12 @@ public class HoldNote : MonoBehaviour
 
         ApplyBodyLength(fullLength);
 
-        
-
-        initialized = true; // 👈 báo hiệu đã setup xong
+        initialized = true;
     }
 
     private void Update()
     {
-        if (!initialized) return; // 👈 chặn Update nếu chưa setup
+        if (!initialized) return; 
         if (finished) return;
 
         double timeSinceInst = SongManager.GetAudioSourceTime() - timeInstantiated;
@@ -101,23 +126,68 @@ public class HoldNote : MonoBehaviour
             float currentLength = Mathf.Max(0f, fullLength * (1f - progress));
             ApplyBodyLength(currentLength);
 
+            if (playerHolding)
+            {
+                heldTime += Time.deltaTime;
+            }
+            else
+            {
+                // Nếu người chơi đã nhả ra nhưng note chưa kết thúc thì ẩn head
+                if (!headHidden && head != null)
+                {
+                    head.enabled = false;
+                    headHidden = true;
+                }
+            }
+
             if (progress >= 1f)
             {
                 finished = true;
-                if (playerHolding) ScoreManager.Perfect();
-                else ScoreManager.Miss();
+
+                float holdRatio = heldTime / holdDuration;
+
+                if (holdRatio >= 0.95f)
+                {
+                    ScoreManager.Perfect();
+                    ParticlePool.Instance.SpawnFromPool(laneID, noteSpawnPoint);
+                    lane.ShowFeedback("Perfect", Color.cyan);
+                    lane.SpawnParticle(noteSpawnPoint.position, lane.perfectParticlePrefab);
+                }
+                else if (holdRatio >= 0.7f)
+                {
+                    ScoreManager.Good();
+                    ParticlePool.Instance.SpawnFromPool(laneID, noteSpawnPoint);
+                    lane.ShowFeedback("Good", Color.green);
+                    lane.SpawnParticle(noteSpawnPoint.position, lane.goodParticlePrefab);
+
+                }
+                else if (holdRatio >= 0.2f)
+                {
+                    ScoreManager.Bad();
+                    ParticlePool.Instance.SpawnFromPool(laneID, noteSpawnPoint);
+                    lane.ShowFeedback("Bad", Color.yellow);
+                    lane.SpawnParticle(noteSpawnPoint.position, lane.goodParticlePrefab);
+
+                }
+                else
+                {
+                    ScoreManager.Miss();
+                    ParticlePool.Instance.SpawnFromPool(laneID, noteSpawnPoint);
+                    lane.ShowFeedback("Miss", Color.red);
+                    lane.SpawnParticle(noteSpawnPoint.position, lane.missParticlePrefab);
+
+                }
 
                 Destroy(gameObject);
             }
         }
+
     }
 
-    // Apply chiều dài (world units) cho body + đặt tail (pivot bottom assumed)
     private void ApplyBodyLength(float worldLength)
     {
         if (bodyIsSimple)
         {
-            // spriteUnitHeight là chiều cao sprite khi scale = 1 (world units)
             float baseH = spriteUnitHeight;
             if (baseH <= 0.0001f) baseH = 1f;
 
@@ -126,19 +196,16 @@ public class HoldNote : MonoBehaviour
             Vector3 ls = body.transform.localScale;
             body.transform.localScale = new Vector3(ls.x, newScaleY, ls.z);
 
-            // Với pivot bottom: bottom tại local y = 0
             body.transform.localPosition = Vector3.zero;
         }
         else
         {
-            // drawMode Sliced/Tiled: body.size là world units
             Vector2 s = body.size;
             s.y = worldLength;
             body.size = s;
             body.transform.localPosition = Vector3.zero;
         }
 
-        // Tail đặt ở đỉnh body (nếu pivot tail center thì center sẽ ở y = worldLength)
         if (tail != null)
             tail.transform.localPosition = new Vector3(0f, worldLength, 0f);
     }
@@ -146,7 +213,14 @@ public class HoldNote : MonoBehaviour
     public void RegisterHoldInput(bool holding)
     {
         playerHolding = holding;
+
+        if (holding && headHidden && head != null)
+        {
+            head.enabled = true;
+            headHidden = false;
+        }
     }
+
 
     private void StartHolding()
     {
@@ -158,7 +232,14 @@ public class HoldNote : MonoBehaviour
             SongManager.Instance.noteTapY,
             transform.localPosition.z
         );
+
+        if (!playerHolding && head != null)
+        {
+            head.enabled = false;
+            headHidden = true;
+        }
     }
+
 
     private void Miss()
     {

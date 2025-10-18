@@ -13,9 +13,9 @@ public class Lane : MonoBehaviour
     public GameObject tapNotePrefab;
     public GameObject holdNotePrefab;
 
-    private List<object> notes = new List<object>(); // chứa cả Note và HoldNote
+    private List<object> notes = new List<object>(); 
     public List<double> timeStamps = new List<double>();
-    private List<double> noteLengths = new List<double>(); // song song với timeStamps
+    private List<double> noteLengths = new List<double>(); 
 
     private int spawnIndex = 0;
     private int inputIndex = 0;
@@ -23,6 +23,10 @@ public class Lane : MonoBehaviour
     [Header("Feedback Settings")]
     public GameObject feedbackPrefab;
     public Transform canvasTransform;
+
+    [Header("Lane Direction")]
+    public string laneID;
+    public Transform noteSpawnPoint;
 
     [Header("Particle Prefabs")]
     public GameObject perfectParticlePrefab;
@@ -131,11 +135,19 @@ public class Lane : MonoBehaviour
                     Destroy(tapNote.gameObject);
                     inputIndex++;
                 }
+                else if (hitDiff < 0.2f) // Bad (bấm hơi sớm hoặc hơi trễ)
+                {
+                    BadHit();
+                    Destroy(tapNote.gameObject);
+                    inputIndex++;
+                }
                 else
                 {
-                    Debug.Log($"Inaccurate tap hit on {inputIndex} note (diff: {hitDiff})");
+                    // Quá xa, không tính — chờ Miss tự xử lý khi qua thời gian
+                    Debug.Log($"Too inaccurate tap hit ({hitDiff})");
                 }
             }
+
 
             if (timeStamp + marginOfError <= audioTime)
             {
@@ -160,28 +172,38 @@ public class Lane : MonoBehaviour
     }
 
     // ===== Scoring / Feedback =====
-    private void PerfectHit()
+    public void PerfectHit()
     {
         ScoreManager.Perfect();
         ShowFeedback("Perfect", Color.cyan);
-        SpawnParticle(perfectParticlePrefab);
+        ParticlePool.Instance.SpawnFromPool(laneID, noteSpawnPoint);
+        SpawnParticle(new Vector3(transform.position.x,SongManager.Instance.noteTapY, transform.position.z), perfectParticlePrefab);
     }
 
-    private void GoodHit()
+    public void GoodHit()
     {
         ScoreManager.Good();
         ShowFeedback("Good", Color.green);
-        SpawnParticle(goodParticlePrefab);
+        ParticlePool.Instance.SpawnFromPool(laneID, noteSpawnPoint);
+        SpawnParticle(new Vector3(transform.position.x,SongManager.Instance.noteTapY, transform.position.z), goodParticlePrefab);
     }
 
-    private void Miss()
+    public void BadHit()
+    {
+        ScoreManager.Bad();
+        ParticlePool.Instance.SpawnFromPool(laneID, noteSpawnPoint);
+        ShowFeedback("Bad", Color.yellow);
+        SpawnParticle(new Vector3(transform.position.x,SongManager.Instance.noteTapY, transform.position.z), goodParticlePrefab);
+    }
+
+    public void Miss()
     {
         ScoreManager.Miss();
         ShowFeedback("Miss", Color.red);
-        SpawnParticle(missParticlePrefab);
+        SpawnParticle(new Vector3(transform.position.x,SongManager.Instance.noteTapY, transform.position.z), missParticlePrefab);
     }
 
-    private void ShowFeedback(string text, Color color)
+    public void ShowFeedback(string text, Color color)
     {
         var obj = Instantiate(feedbackPrefab, canvasTransform);
         var popup = obj.GetComponent<TextMeshProUGUI>();
@@ -220,13 +242,9 @@ public class Lane : MonoBehaviour
         Destroy(popup.gameObject);
     }
 
-    private void SpawnParticle(GameObject particlePrefab)
+    public void SpawnParticle(Vector3 spawnPos,GameObject particlePrefab)
     {
-        Vector3 spawnPos = new Vector3(
-            transform.position.x,
-            SongManager.Instance.noteTapY,
-            transform.position.z
-        );
+        
         var particle = Instantiate(particlePrefab, spawnPos, Quaternion.identity);
         Destroy(particle, 1f);
     }
