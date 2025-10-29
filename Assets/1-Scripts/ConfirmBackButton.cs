@@ -33,8 +33,6 @@ public class ConfirmBackButton : MonoBehaviour
             text = GetComponentInChildren<TextMeshProUGUI>();
 
         originalScale = transform.localScale;
-
-        
     }
 
     void Start()

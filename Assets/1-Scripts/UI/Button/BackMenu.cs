@@ -9,18 +9,31 @@ public class BackMenu : MonoBehaviour
 
         if (panelContainer.transform.childCount > 0)
         {
-            Transform lastPanel = panelContainer.transform.GetChild(panelContainer.transform.childCount - 1);
-            if (lastPanel != null)
-            { 
-                lastPanel.gameObject.SetActive(false);
+            // Tìm panel đang bật cuối cùng
+            for (int i = panelContainer.transform.childCount - 1; i >= 0; i--)
+            {
+                Transform panel = panelContainer.transform.GetChild(i);
+                if (panel.gameObject.activeSelf)
+                {
+                    panel.gameObject.SetActive(false);
+                    break;
+                }
             }
-            gameObject.SetActive(false);
         }
 
-        if (panelContainer.transform.childCount == 0)
+        // Sau khi tắt, nếu không còn panel nào bật -> ẩn nút Back
+        bool anyActive = false;
+        for (int i = 0; i < panelContainer.transform.childCount; i++)
         {
-            gameObject.SetActive(false);
+            if (panelContainer.transform.GetChild(i).gameObject.activeSelf)
+            {
+                anyActive = true;
+                break;
+            }
         }
+
+        gameObject.SetActive(anyActive); // nếu không còn panel nào bật thì tự ẩn
+
     }
 
 

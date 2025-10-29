@@ -17,7 +17,7 @@ public class SongManager : MonoBehaviour
     [Header("Gameplay Settings")]
     public Lane[] lanes;
     public float songDelayInSeconds;
-    public double marginOfError;                 // Sai số cho phép
+    public double marginOfError;                 
     public int inputDelayInMilliseconds;
     public float noteTime;
     public float noteSpawnY;

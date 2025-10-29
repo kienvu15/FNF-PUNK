@@ -123,19 +123,19 @@ public class Lane : MonoBehaviour
             {
                 double hitDiff = Math.Abs(audioTime - timeStamp);
 
-                if (hitDiff < 0.05f) // Perfect
+                if (hitDiff <= 0.05f) // Perfect
                 {
                     PerfectHit();
                     Destroy(tapNote.gameObject);
                     inputIndex++;
                 }
-                else if (hitDiff < 0.1f) // Good
+                else if (hitDiff <= 0.1f) // Good
                 {
                     GoodHit();
                     Destroy(tapNote.gameObject);
                     inputIndex++;
                 }
-                else if (hitDiff < 0.2f) // Bad (bấm hơi sớm hoặc hơi trễ)
+                else if (hitDiff <= 0.25f) // Bad
                 {
                     BadHit();
                     Destroy(tapNote.gameObject);
@@ -143,8 +143,8 @@ public class Lane : MonoBehaviour
                 }
                 else
                 {
-                    // Quá xa, không tính — chờ Miss tự xử lý khi qua thời gian
-                    Debug.Log($"Too inaccurate tap hit ({hitDiff})");
+                    // Quá xa -> không chấm, chờ Miss tự xử lý
+                    Debug.Log($"Too far from note: {hitDiff}");
                 }
             }
 

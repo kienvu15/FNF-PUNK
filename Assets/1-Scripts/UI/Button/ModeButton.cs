@@ -15,4 +15,20 @@ public class ModeButton : MonoBehaviour
         if (confirmButton == null)
             confirmButton = GetComponent<ConfirmTextButton>();
     }
+
+    public void ShowSotryPanel() 
+    { 
+    
+    }
+
+    public void ShowFreePlayPanel()
+    {
+
+    }
+
+    public void ShowZenPanel()
+    {
+
+    }
+
 }

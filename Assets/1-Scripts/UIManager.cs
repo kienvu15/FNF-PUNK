@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class UIManager : MonoBehaviour
 
     [Header("References")]
     public Transform uiRoot;
-   public GameObject backButton;
+    public GameObject backButton;
     public List<GameObject> panelPrefabs;
 
     private Dictionary<string, GameObject> panelPool = new();
@@ -26,7 +27,7 @@ public class UIManager : MonoBehaviour
 
         panel.SetActive(true);
         AnimateOpen(panel);
-       backButton.SetActive(true);
+        backButton.SetActive(true);
     }
 
     // 🔹 Hàm đóng panel
@@ -34,7 +35,6 @@ public class UIManager : MonoBehaviour
     {
         if (!panelPool.TryGetValue(panelName, out var panel)) return;
         AnimateClose(panel);
-      backButton.SetActive(false);
     }
 
     // 🔹 Tạo hoặc lấy panel trong pool
@@ -53,6 +53,14 @@ public class UIManager : MonoBehaviour
         panel.name = name;
         panel.SetActive(false);
         panelPool[name] = panel;
+
+        foreach (var confirmBtn in panel.GetComponentsInChildren<ConfirmTextButton>(true))
+        {
+            if (confirmBtn.name == "StoryMode-Button")
+                confirmBtn.onConfirmClick.AddListener(() => ShowPanel("FreePlaySelect_Panel"));
+        }
+
+
         return panel;
     }
 

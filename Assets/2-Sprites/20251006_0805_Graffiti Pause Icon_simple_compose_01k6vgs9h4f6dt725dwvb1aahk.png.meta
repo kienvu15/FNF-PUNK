@@ -1,0 +1,520 @@
+fileFormatVersion: 2
+guid: e48361be74d62f242a537783bbfc50eb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5083029397042732449
+    second: 20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_0
+  - first:
+      213: 8603137112976486313
+    second: 20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_1
+  - first:
+      213: -512029357074480139
+    second: 20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_2
+  - first:
+      213: -6531235007273043751
+    second: 20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_3
+  - first:
+      213: -5056678661374568356
+    second: 20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_4
+  - first:
+      213: 1552576137578057600
+    second: 20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_5
+  - first:
+      213: 3671575097974419682
+    second: 20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_6
+  - first:
+      213: 7581439221334158602
+    second: 20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_7
+  - first:
+      213: 1870022041743848045
+    second: 20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_8
+  - first:
+      213: -8056935140868546550
+    second: 20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_9
+  - first:
+      213: 3625504404321973552
+    second: 20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_10
+  - first:
+      213: 185356551761358412
+    second: 20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_11
+  - first:
+      213: -3190956453559474483
+    second: 20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_12
+  - first:
+      213: -1063642528523041116
+    second: 20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_13
+  - first:
+      213: -7476611182621255469
+    second: 20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 0
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_0
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 71
+        width: 867
+        height: 923
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f526666c1b37579b0800000000000000
+      internalID: -5083029397042732449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_1
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 960
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9af61f47f9b746770800000000000000
+      internalID: 8603137112976486313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_2
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 953
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f301093308e4e8f0800000000000000
+      internalID: -512029357074480139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_3
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 950
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d8f4e66d546c55a0800000000000000
+      internalID: -6531235007273043751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_4
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 758
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5898758c8113d9b0800000000000000
+      internalID: -5056678661374568356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_5
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 727
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08f861f65cbdb8510800000000000000
+      internalID: 1552576137578057600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_6
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 685
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e07fe8491e04f230800000000000000
+      internalID: 3671575097974419682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_7
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 678
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0d26d9bdcea63960800000000000000
+      internalID: 7581439221334158602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_8
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 591
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d62fa40a327a3f910800000000000000
+      internalID: 1870022041743848045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_9
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 575
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a002b264d24003090800000000000000
+      internalID: -8056935140868546550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_10
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 479
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 035b9370c01605230800000000000000
+      internalID: 3625504404321973552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_11
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 455
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4ee6804dc4829200800000000000000
+      internalID: 185356551761358412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_12
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 449
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc6e8db030277b3d0800000000000000
+      internalID: -3190956453559474483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_13
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 391
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a6c26771ce2d31f0800000000000000
+      internalID: -1063642528523041116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_14
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 297
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d895200ebdbd3890800000000000000
+      internalID: -7476611182621255469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_0: -5083029397042732449
+      20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_1: 8603137112976486313
+      20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_10: 3625504404321973552
+      20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_11: 185356551761358412
+      20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_12: -3190956453559474483
+      20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_13: -1063642528523041116
+      20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_14: -7476611182621255469
+      20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_2: -512029357074480139
+      20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_3: -6531235007273043751
+      20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_4: -5056678661374568356
+      20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_5: 1552576137578057600
+      20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_6: 3671575097974419682
+      20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_7: 7581439221334158602
+      20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_8: 1870022041743848045
+      20251006_0805_Graffiti Pause Icon_simple_compose_01k6vgs9h4f6dt725dwvb1aahk_9: -8056935140868546550
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

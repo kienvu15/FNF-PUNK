@@ -143,15 +143,4 @@ public class ConfirmTextButton : MonoBehaviour
         manager?.Unregister(this);
     }
 
-    //private void OnDisable()
-    //{
-    //    scaleTween?.Kill();
-    //    transform.localScale = originalScale;
-    //    isConfirming = false;
-
-    //    // ❗Không reset isExpanded ở đây
-    //    // để panel bật lại vẫn giữ đúng trạng thái prefab
-    //    SetTextColor(normalColor, normalOutlineColor);
-    //    manager?.Unregister(this);
-    //}
 }

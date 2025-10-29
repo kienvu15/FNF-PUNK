@@ -5,7 +5,7 @@ public class GameManager : MonoBehaviour
 {
 
     public GameObject scene1;
-    public GameObject scene2;
+    //public GameObject scene2;
 
     void Awake()
     {
@@ -15,11 +15,12 @@ public class GameManager : MonoBehaviour
     public void touchStart()
     {
         scene1.SetActive(false);
-        scene2.SetActive(true);
+        //scene2.SetActive(true);
     }
+
     public void Back2Menu()
     {
-        scene2.SetActive(false);
+        //scene2.SetActive(false);
         scene1.SetActive(true);
     }
 

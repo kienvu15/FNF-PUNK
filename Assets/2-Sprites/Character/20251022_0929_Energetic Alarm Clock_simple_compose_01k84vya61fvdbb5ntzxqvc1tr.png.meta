@@ -1,0 +1,312 @@
+fileFormatVersion: 2
+guid: e2c4eca2136a60d4eb722af3b96eb884
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6522181477749131412
+    second: 20251022_0929_Energetic Alarm Clock_simple_compose_01k84vya61fvdbb5ntzxqvc1tr_0
+  - first:
+      213: -405217471893933452
+    second: 20251022_0929_Energetic Alarm Clock_simple_compose_01k84vya61fvdbb5ntzxqvc1tr_1
+  - first:
+      213: -8074001915388840709
+    second: 20251022_0929_Energetic Alarm Clock_simple_compose_01k84vya61fvdbb5ntzxqvc1tr_2
+  - first:
+      213: -9031124430996328983
+    second: 20251022_0929_Energetic Alarm Clock_simple_compose_01k84vya61fvdbb5ntzxqvc1tr_3
+  - first:
+      213: 794610945729034052
+    second: 20251022_0929_Energetic Alarm Clock_simple_compose_01k84vya61fvdbb5ntzxqvc1tr_4
+  - first:
+      213: -6965386106562212026
+    second: 20251022_0929_Energetic Alarm Clock_simple_compose_01k84vya61fvdbb5ntzxqvc1tr_5
+  - first:
+      213: 8334387947420904984
+    second: 20251022_0929_Energetic Alarm Clock_simple_compose_01k84vya61fvdbb5ntzxqvc1tr_6
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 20251022_0929_Energetic Alarm Clock_simple_compose_01k84vya61fvdbb5ntzxqvc1tr_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 48
+        width: 1019
+        height: 960
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4988edd7f71738a50800000000000000
+      internalID: 6522181477749131412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20251022_0929_Energetic Alarm Clock_simple_compose_01k84vya61fvdbb5ntzxqvc1tr_1
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 890
+        width: 68
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 472faf23bd0606af0800000000000000
+      internalID: -405217471893933452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20251022_0929_Energetic Alarm Clock_simple_compose_01k84vya61fvdbb5ntzxqvc1tr_2
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 906
+        width: 131
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf4bc6d290263ff80800000000000000
+      internalID: -8074001915388840709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20251022_0929_Energetic Alarm Clock_simple_compose_01k84vya61fvdbb5ntzxqvc1tr_3
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 935
+        width: 90
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9edac10dd200ba280800000000000000
+      internalID: -9031124430996328983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20251022_0929_Energetic Alarm Clock_simple_compose_01k84vya61fvdbb5ntzxqvc1tr_4
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 918
+        width: 67
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 447f0d2f176070b00800000000000000
+      internalID: 794610945729034052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20251022_0929_Energetic Alarm Clock_simple_compose_01k84vya61fvdbb5ntzxqvc1tr_5
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 59
+        width: 185
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64f0be28d3af55f90800000000000000
+      internalID: -6965386106562212026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20251022_0929_Energetic Alarm Clock_simple_compose_01k84vya61fvdbb5ntzxqvc1tr_6
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 8
+        width: 358
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81ee1524ea1b9a370800000000000000
+      internalID: 8334387947420904984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      20251022_0929_Energetic Alarm Clock_simple_compose_01k84vya61fvdbb5ntzxqvc1tr_0: 6522181477749131412
+      20251022_0929_Energetic Alarm Clock_simple_compose_01k84vya61fvdbb5ntzxqvc1tr_1: -405217471893933452
+      20251022_0929_Energetic Alarm Clock_simple_compose_01k84vya61fvdbb5ntzxqvc1tr_2: -8074001915388840709
+      20251022_0929_Energetic Alarm Clock_simple_compose_01k84vya61fvdbb5ntzxqvc1tr_3: -9031124430996328983
+      20251022_0929_Energetic Alarm Clock_simple_compose_01k84vya61fvdbb5ntzxqvc1tr_4: 794610945729034052
+      20251022_0929_Energetic Alarm Clock_simple_compose_01k84vya61fvdbb5ntzxqvc1tr_5: -6965386106562212026
+      20251022_0929_Energetic Alarm Clock_simple_compose_01k84vya61fvdbb5ntzxqvc1tr_6: 8334387947420904984
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
