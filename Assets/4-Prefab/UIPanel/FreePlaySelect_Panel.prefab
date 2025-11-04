@@ -500,7 +500,7 @@ MonoBehaviour:
   button: {fileID: 7180218104400588400}
   nameText: {fileID: 15187803532703067}
   volumeLevel: 1
-  sceneToLoad: 1
+  sceneToLoad: 2
   fontGrow: 10
   flashDuration: 0.15
   flashCount: 3
@@ -969,9 +969,9 @@ RectTransform:
   - {fileID: 2420709466646133269}
   m_Father: {fileID: 1623866465976550414}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1716, y: -262.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1144, y: 394.39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7818949949896162451
@@ -4168,9 +4168,9 @@ RectTransform:
   - {fileID: 4366497370681111006}
   m_Father: {fileID: 1623866465976550414}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 572, y: -262.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1144, y: 394.39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3169282359211595208

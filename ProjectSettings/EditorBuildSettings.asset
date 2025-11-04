@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/3-FNF-GamePlay.unity
     guid: f1b821f35c9bb8742a7636f565516517
+  - enabled: 1
+    path: Assets/Scenes/4-FNF-GamePlay.unity
+    guid: 8a708cdcd8f9d494296bf37bf9cfb89d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
