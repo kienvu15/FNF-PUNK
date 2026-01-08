@@ -2369,7 +2369,7 @@ MonoBehaviour:
   noteTime: 1
   noteSpawnY: 7
   noteTapY: -2.8
-  fileLocation: Press2Start.mid
+  fileLocation: aloso.mid
 --- !u!4 &344438350
 Transform:
   m_ObjectHideFlags: 0
@@ -2396,7 +2396,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: f17fc57ca4e8f29429057b4bbb69e505, type: 3}
+  m_Resource: {fileID: 8300000, guid: 35f8c69b23bf8d84b8ddcf9cd11544db, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

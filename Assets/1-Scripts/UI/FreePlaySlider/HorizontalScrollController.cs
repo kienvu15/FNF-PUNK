@@ -2,10 +2,14 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 
 [RequireComponent(typeof(ScrollRect))]
 public class HorizontalScrollController : MonoBehaviour
 {
+    [Header("HighScore Display")]
+    public TextMeshProUGUI highScoreText;
+
     [Header("References")]
     public ScrollRect scrollRect;
     public RectTransform content;
@@ -127,17 +131,24 @@ public class HorizontalScrollController : MonoBehaviour
 
     private void NotifySelection()
     {
-        OnItemSelected?.Invoke(currentIndex);
-        // ---- Hiển thị ảnh theo dữ liệu của item hiện tại ----
-        
-            var data = items[currentIndex].GetComponentInChildren<TestButton>();
-            if (data != null)
-            {
-                int level = Mathf.Clamp(data.volumeLevel, 1, volumeSprites.Length);
-                targetImage.sprite = volumeSprites[level - 1];
-            }
-        
+        var data = items[currentIndex].GetComponentInChildren<TestButton>();
+        if (data == null) return;
 
+        // Lưu level đang chọn
+        LevelManager.currentLevelID = data.levelID;
+
+        // Update image
+        int level = Mathf.Clamp(data.volumeLevel, 1, volumeSprites.Length);
+        targetImage.sprite = volumeSprites[level - 1];
+
+        // Load HighScore
+        string key = $"HighScore_Level_{data.levelID}";
+        int highScore = PlayerPrefs.GetInt(key, 0);
+        highScoreText.text = $"{highScore}";
+
+        OnItemSelected?.Invoke(currentIndex);
     }
+
+
 
 }

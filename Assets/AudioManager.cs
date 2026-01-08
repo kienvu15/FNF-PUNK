@@ -31,6 +31,7 @@ public class AudioManager : MonoBehaviour
     {
         
     }
+
     public void ActtiveSeting()
     {
         isPaused = true;

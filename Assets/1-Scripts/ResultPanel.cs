@@ -22,6 +22,8 @@ public class ResultPanel : MonoBehaviour
         setting.SetActive(false);
         scorep.SetActive(false);
 
+        SaveHighScore();   // 👈 thêm dòng này
+
         int totalNotes = ScoreManager.totalNotes;
         int hitNotes = ScoreManager.perfectCount + ScoreManager.goodCount;
         float accuracy = (totalNotes > 0) ? (hitNotes / (float)totalNotes) * 100f : 0f;
@@ -33,6 +35,23 @@ public class ResultPanel : MonoBehaviour
         scoreText.text = $"Score: ............ {ScoreManager.score}";
         rankText.text = $"Rank: ................. {GetRank(accuracy)}";
     }
+
+
+    private void SaveHighScore()
+    {
+        int levelID = LevelManager.currentLevelID;
+        int score = ScoreManager.score;
+
+        string key = $"HighScore_Level_{levelID}";
+        int oldScore = PlayerPrefs.GetInt(key, 0);
+
+        if (score > oldScore)
+        {
+            PlayerPrefs.SetInt(key, score);
+            PlayerPrefs.Save();
+        }
+    }
+
 
     private string GetRank(float accuracy)
     {
@@ -51,6 +70,6 @@ public class ResultPanel : MonoBehaviour
 
     public void BackToMenu()
     {
-        SceneManager.LoadScene("Menu"); // đổi tên scene menu của bạn
+        SceneManager.LoadScene(0);
     }
 }

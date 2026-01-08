@@ -129,10 +129,10 @@ TextureImporter:
       name: music-note-song-melody-or-tune-pixel-art-vector-icon-for-musical-apps-and-websites-1-bit-design-for-sticker-logo-stamp-mobile-app-and-embroidery-isolated-illustration-700-241200584-removebg-preview_0
       rect:
         serializedVersion: 2
-        x: 207
-        y: 101
-        width: 125
-        height: 298
+        x: 98
+        y: 98
+        width: 305
+        height: 305
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

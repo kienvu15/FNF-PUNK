@@ -7,6 +7,8 @@ using DG.Tweening;
 
 public class TestButton : MonoBehaviour
 {
+    public int levelID;
+
     public Button button;
     public TextMeshProUGUI nameText;
     public int volumeLevel = 1;

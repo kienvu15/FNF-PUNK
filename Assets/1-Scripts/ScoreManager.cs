@@ -85,7 +85,6 @@ public class ScoreManager : MonoBehaviour
         hitSFX.pitch = Random.Range(pitchMin, pitchMax);
         hitSFX.Play();
 
-        // Hiệu ứng DOTween Sequence
         Sequence seq = DOTween.Sequence();
         seq.Append(rect.DOScale(1.3f, 0.15f).SetEase(Ease.OutBack))
            .Join(scoreText.DOColor(color, 0.1f))
@@ -118,9 +117,18 @@ public class ScoreManager : MonoBehaviour
     {
         comboScore = 0;
         Instance.UpdateComboUI();
+
+        // Trừ máu
         HealthBar.Instance.SubtractHealth(0.04f);
+
+        // 🔊 Play miss sound
+        Instance.missSFX.volume = AudioManager.Instance.sfxVolume;
+        Instance.missSFX.pitch = Random.Range(0.9f, 1.1f); // optional cho tự nhiên
+        Instance.missSFX.Play();
+
         missCount++;
     }
+
 
     private void UpdateComboUI()
     {

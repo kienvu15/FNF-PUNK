@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play  mode
+  m_text: Vu Trung Kien
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play  mode
+  m_text: Vu Trung Kien
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
@@ -390,7 +390,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 8373671526410073229}
   m_OnClick:
     m_PersistentCalls:
@@ -442,7 +442,7 @@ MonoBehaviour:
   highlightOutlineColor: {r: 0, g: 0, b: 0, a: 1}
   scaleUpSize: 1.2
   scaleTime: 0.2
-  startExpanded: 0
+  isExpanded: 0
 --- !u!114 &1204874629756318012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -576,7 +576,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 3722442849937502010}
   m_OnClick:
     m_PersistentCalls:
@@ -628,7 +628,7 @@ MonoBehaviour:
   highlightOutlineColor: {r: 0, g: 0, b: 0, a: 1}
   scaleUpSize: 1.2
   scaleTime: 0.2
-  startExpanded: 0
+  isExpanded: 0
 --- !u!114 &7651080946703182780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -762,7 +762,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 6927486314295749830}
   m_OnClick:
     m_PersistentCalls:
@@ -814,7 +814,7 @@ MonoBehaviour:
   highlightOutlineColor: {r: 0, g: 0, b: 0, a: 1}
   scaleUpSize: 1.2
   scaleTime: 0.2
-  startExpanded: 1
+  isExpanded: 0
 --- !u!114 &2585703160799441553
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -895,7 +895,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play  mode
+  m_text: Vu Trung Kien
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
@@ -1031,7 +1031,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play  mode
+  m_text: Vu Trung Kien
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
@@ -1220,7 +1220,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 2727058494695671986}
   m_OnClick:
     m_PersistentCalls:
@@ -1272,7 +1272,7 @@ MonoBehaviour:
   highlightOutlineColor: {r: 0, g: 0, b: 0, a: 1}
   scaleUpSize: 1.2
   scaleTime: 0.2
-  startExpanded: 0
+  isExpanded: 0
 --- !u!114 &3039809226395346668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1671,7 +1671,7 @@ MonoBehaviour:
   highlightOutlineColor: {r: 0, g: 0, b: 0, a: 1}
   scaleUpSize: 1.2
   scaleTime: 0.2
-  startExpanded: 0
+  isExpanded: 0
 --- !u!114 &3397777004121054848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1752,7 +1752,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play  mode
+  m_text: Vu Trung Kien
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: d75b8f41e959450c84ac6e967084d3e1, type: 2}
@@ -1941,7 +1941,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 4939343188727681093}
   m_OnClick:
     m_PersistentCalls:
@@ -1993,7 +1993,7 @@ MonoBehaviour:
   highlightOutlineColor: {r: 0, g: 0, b: 0, a: 1}
   scaleUpSize: 1.2
   scaleTime: 0.2
-  startExpanded: 0
+  isExpanded: 0
 --- !u!114 &7420057837683637719
 MonoBehaviour:
   m_ObjectHideFlags: 0
